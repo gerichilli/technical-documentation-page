@@ -1,0 +1,156 @@
+:root {
+    /* setting the colors */
+    --primary-dark: #403f48;
+    --primary-light: #fff8cd;
+
+    --green-dark: #596c68;
+    --green-light: #95a792;
+
+    /*setting font-size*/
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    line-height: 2;
+    box-sizing: border-box;
+
+    position: relative;
+    display: flex;
+}
+
+.header {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.nav__header {
+    padding: 2rem 3rem;
+}
+
+.navigation {
+    min-width: 320px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    right: 0;
+    padding-right: 0px;
+    border: none;
+    border-right: 2px solid var(--primary-light);
+    overflow-y: auto;
+    flex-shrink: 1;
+}
+
+.navigation__list {
+    list-style: none;
+}
+
+.navigation__item:not(:last-child) {
+    border-bottom: 1px solid var(--primary-light);
+}
+
+.navigation__link:link,
+.navigation__link:visited {
+    display: block;
+    padding: 1rem 3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--primary-light);
+    transition: all .2s;
+}
+
+.navigation__link:hover,
+.navigation__link:active {
+    color: var(--green-light);
+}
+
+.main {
+    padding: 2rem 8rem;
+    flex-grow: 1;
+}
+
+.main-section {
+    margin-bottom: 3rem;
+}
+
+p {
+    text-indent: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.main ul {
+    margin-left: 4rem;
+}
+
+.main ul li {
+    margin-bottom: 1.5rem;
+}
+
+code {
+    display: block;
+    background-color: var(--green-dark);
+    margin-left: 4rem;
+    padding: 1.5rem 2rem 2rem 2rem;
+    border-radius: 1rem;
+}
+
+.reference__link:link,
+.reference__link:visited {
+    text-decoration: none;
+    color: var(--green-light);
+}
+
+.reference__link:hover,
+.reference__link:active {
+    border-bottom: 1px solid currentColor;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 1000px) {
+
+    .navigation {
+        min-width: 250px;
+        font-size: 1.4rem;
+    }
+
+    .header {
+        font-size: 2.2rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        flex-direction: column;
+    }
+
+    .navigation {
+        position: relative;
+        height: 400px;
+        border-bottom: 1px solid var(--primary-light);
+    }
+
+    .nav__header {
+        position: sticky;
+        text-align: center;
+        top: 0;
+        bottom: 0;
+        color: var(--green-dark);
+        background-color: var(--primary-light);
+    }
+}
